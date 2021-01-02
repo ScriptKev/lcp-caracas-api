@@ -1,0 +1,22 @@
+@api-url = http://localhost:4000
+
+# User from MongoDB local PC ScriptKev - Can change this id
+@user-id = 5feffb5c58634634fcfef5be
+
+# API Services: Users
+### - Get Users
+GET {{ api-url }}/api/users
+
+### - Get User
+GET {{ api-url }}/api/users/{{ user-id }}
+
+### - Create User
+POST {{ api-url }}/api/users
+Content-Type: application/json
+
+{
+  "name": "Name Test",
+  "lastname": "Last Name Test",
+  "phone": "04961234567",
+  "email": "user2.test@test.com"
+}
